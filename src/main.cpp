@@ -61,7 +61,10 @@ void loop() {
 }
 
 int handleDevice(AsyncWebServerRequest *request) {
-  
+  String deviceIp = request->host().c_str();
+  Serial.println("Host: " + deviceIp);
+
+  Serial.println(request->arg("plain"));
 }
 
 // class Device {
